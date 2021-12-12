@@ -233,10 +233,10 @@
                         </div>
                         <div class="Center_slider_block" >
                             <img src="./static/pictures/Rectangle(2).svg" alt="Бутыль масла" >
-                            <div class="slider_arrow_left_at_640">
+                            <div class="slider_arrow_left_at_960">
                                 <img src="./static/icons/Vector(3).svg" alt="Иконка влево">
                             </div>
-                            <div class="slider_arrow_right_at_640">
+                            <div class="slider_arrow_right_at_960">
                                 <img src="./static/icons/Vector(4).svg" alt="Иконка вправо">
                             </div>
                         </div>
@@ -748,6 +748,8 @@
             Center_slider_block: document.querySelector( '.Center_slider_block' ),
             slider_arrow_left_at_640: document.querySelector( '.slider_arrow_left_at_640' ),
             slider_arrow_right_at_640: document.querySelector( '.slider_arrow_right_at_640' ),
+            slider_arrow_left_at_960: document.querySelector( '.slider_arrow_left_at_960' ),
+            slider_arrow_right_at_960: document.querySelector( '.slider_arrow_right_at_960' ),
         };
 
         const allElementsBySelector = {
@@ -920,8 +922,8 @@
 
                 elementsBySelector.advertisement__right_side.style.display = 'block';
 
-                elementsBySelector.slider_arrow_left_at_640.style.display = 'none';
-                elementsBySelector.slider_arrow_right_at_640.style.display = 'none';
+                elementsBySelector.slider_arrow_left_at_960.style.display = 'block';
+                elementsBySelector.slider_arrow_right_at_960.style.display = 'block';
 
                 elementsById.phone_up_to_960.style.display = 'none';
                 elementsById.phone_number_after_960.style.display = 'block';
@@ -946,13 +948,16 @@
 
                 elementsBySelector.phone_slider_picture.style.display = 'none';
                 elementsBySelector.Right_slider_block.style.display = 'none';
+                elementsBySelector.Center_slider_block.style.display = 'block'
+
+                elementsBySelector.slider_arrow_left_at_960.style.display = 'block';
+                elementsBySelector.slider_arrow_right_at_960.style.display = 'block';
 
                 elementsBySelector.slider_arrow_left_at_640.style.display = 'none';
                 elementsBySelector.slider_arrow_right_at_640.style.display = 'none';
+                
 
                 for ( let block of document.querySelectorAll( '.Block_number' ) ) {
-
-                    console.log( block );
 
                     block.style.display = 'none';
 
@@ -976,6 +981,12 @@
                 elementsById['phone_up_to_960'].style.display = 'none';
 
                 elementsBySelector.phone_slider_picture.style.display = 'block';
+
+                elementsBySelector.slider_arrow_left_at_960.style.display = 'none';
+                elementsBySelector.slider_arrow_right_at_960.style.display = 'none';
+
+                elementsBySelector.slider_arrow_left_at_640.style.display = 'block';
+                elementsBySelector.slider_arrow_right_at_640.style.display = 'block';
 
                 elementsBySelector.Right_slider_block.style.display = 'none';
                 elementsBySelector.Center_slider_block.style.display = 'none';
