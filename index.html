@@ -854,89 +854,6 @@
 
         function ChangingTheInterface( ) {
 
-            // // if ( window.innerWidth <= 1920 && window.innerWidth >= 1601 ) {
-
-            //     document.querySelector( '.location_at_1600' ).style.display = 'none';
-            //     document.querySelector( '.menu_at_1600' ).style.display = 'none';
-
-            // } else if ( window.innerWidth <= 1600 && window.innerWidth >= 1281 ) {
-
-            //     elementsBySelector.CTB.style.borderBottomLeftRadius = '4px';
-            //     elementsBySelector.CTB.style.borderBottomRightRadius = '4px';
-
-            //     elementsById.MEli_3.style.display = '';
-            //     elementsById.SEli_7.style.display = '';
-
-            //     elementsBySelector.Loc.style.display = 'none';
-            //     elementsBySelector.Loc_1600.style.display = 'block';
-
-            // } else if ( window.innerWidth <= 1280 && window.innerWidth >= 961 ) {
-
-            //     document.getElementById( 'MEli_3' ).style.display = 'none';
-            //     document.getElementById( 'MEli_5' ).style.display = 'none';
-            //     document.getElementById( 'SEli_7' ).style.display = 'none';
-            //     document.querySelector( '.location' ).style.display = 'none';
-            //     document.querySelector( '.location_at_1600' ).style.display = 'block';
-
-            //     CTB.style.borderBottomLeftRadius = '4px';
-            //     CTB.style.borderBottomRightRadius = '4px';
-                
-            //     for ( let block of document.querySelectorAll( '.Block_number' ) ) {
-
-            //         block.style.display = 'none';
-
-            //     }
-
-            //     for ( let block of document.querySelectorALL( '.Unit_block' ) ) {
-
-            //         block.style.display = '';
-
-            //     }
-
-            // } else if ( window.innerWidth <= 960 && window.innerWidth >= 641 ) {
-
-            //     elementsBySelector.Menu.style.display = 'none';
-            //     elementsBySelector.Menu_1600.style.display = 'block';
-            //     elementsBySelector.Menu_1600.style.marginLeft = `${ document.querySelector( '.Catalog_button' ).getBoundingClientRect( ).left}px`;
-
-            //     elementsBySelector.Loc.style.display = 'none';
-            //     elementsBySelector.Loc_1600.display = 'block';
-
-            //     elementsBySelector.RSB_h1.style.display = 'none';
-
-            //     elementsBySelector.ARS.style.display = 'none';
-
-            //     elementsById.PUT_960.style.display = 'none';
-            //     elementsById.PNA_960.style.display = 'block';
-
-            //     elementsById.SEli_6.style.display = 'none';
-            //     elementsById.SEli_5.style.display = 'none';
-
-            //     DisappearingElements( allElementsBySelector.Block_number, 'none' );
-            //     DisappearingElements( allElementsBySelector.Unit_block, '' );
-
-            //     elementsBySelector.CTB.style.borderBottomLeftRadius = '4px';
-            //     elementsBySelector.CTB.style.borderBottomRightRadius = '4px';
-
-            // } else if (  window.innerWidth <= 640 && window.innerWidth >= 320 ) {
-
-            //     elementsById.large_format_header.style.display = 'none';
-            //     elementsById.cap_at_640.style.display = 'block';
-
-            //     elementsBySelector.Right_slider_block.style.display = 'none';
-
-            //     elementsBySelector.CTB.style.borderBottomLeftRadius = '4px';
-            //     elementsBySelector.CTB.style.borderBottomRightRadius = '4px';
-
-            //     DisappearingElements( allElementsBySelector.Block_number, 'none' );
-            //     DisappearingElements( allElementsBySelector.Unit_block, '' );
-                
-            //     elementsById.phone_up_to_960.style.display = 'none';
-            //     elementsById.phone_number_after_960.style.display = 'block';
-
-
-            // }
-
             if ( window.innerWidth >= 1600 ) {
 
                 elementsById['hat_for_all_sizes_from_1280px'].style.display = 'block';
@@ -954,7 +871,7 @@
                 elementsById.MEli_3.style.display = '';
                 elementsById.SEli_7.style.display = '';
 
-                elementsBySelector.location.style.display = 'block';
+                elementsBySelector.location.style.display = 'flex';
                 elementsBySelector.location_at_1600.style.display = 'none';
 
             } else if ( window.innerWidth <= 1599 && window.innerWidth >= 1280 ) {
@@ -978,17 +895,13 @@
                 
                 for ( let block of document.querySelectorAll( '.Block_number' ) ) {
 
-                    block.style.display = 'none';
+                    block.style.display = 'block';
 
                 }
 
-                for ( let block of document.querySelectorAll( '.Unit_block' ) ) {
+                elementsById.phone_number_after_960.style.display = 'none';
 
-                    block.style.display = '';
-
-                }
-
-            } else if ( window.innerWidth <= 1279 && window.innerWidth >= 960 ) {
+            } else if ( window.innerWidth <= 1279 && window.innerWidth >= 961 ) {
 
                 elementsById['hat_for_all_sizes_from_1280px'].style.display = 'block';
                 elementsById['hat_for_size_959_640px'].style.display = 'none';
@@ -1005,7 +918,7 @@
 
                 elementsBySelector.phone_slider_picture.style.display = 'none';
 
-                elementsBySelector.advertisement__right_side.style.display = 'none';
+                elementsBySelector.advertisement__right_side.style.display = 'block';
 
                 elementsBySelector.slider_arrow_left_at_640.style.display = 'none';
                 elementsBySelector.slider_arrow_right_at_640.style.display = 'none';
@@ -1022,7 +935,7 @@
                 elementsBySelector.Catalog_button.style.borderBottomLeftRadius = '4px';
                 elementsBySelector.Catalog_button.style.borderBottomRightRadius = '4px';
 
-            } else if ( window.innerWidth <= 959 && window.innerWidth >= 640 ) {
+            } else if ( window.innerWidth <= 960 && window.innerWidth >= 640 ) {
 
                 elementsById['hat_for_all_sizes_from_1280px'].style.display = 'none';
                 elementsById['hat_for_size_959_640px'].style.display = 'block';
@@ -1056,11 +969,13 @@
 
             } else if ( window.innerWidth <= 639 && window.innerWidth >= 320 ) {
 
-                elementsById['hat_for_all_sizes_from_1280px'].style.display = 'none';
-                elementsById['hat_for_size_960_640px'].style.display = 'none';
-                elementsById['hat_for_size_639-320px'].style.display = 'block';
+                elementsById.hat_for_all_sizes_from_1280px.style.display = 'none';
+                elementsById.hat_for_size_959_640px.style.display = 'none';
+                elementsById.hat_for_size_639_320px.style.display = 'block';
                 elementsById['active_search_field'].style.display = 'none';
                 elementsById['phone_up_to_960'].style.display = 'none';
+
+                elementsBySelector.phone_slider_picture.style.display = 'block';
 
                 elementsBySelector.Right_slider_block.style.display = 'none';
                 elementsBySelector.Center_slider_block.style.display = 'none';
